@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anup Launcher</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+    <style>
+        *{box-sizing: border-box;}
+        html,body{font-size: 13px;margin: 0;padding: 0;width:250px;max-width: 250px;}
+        a:link, a:visited{color: #000;outline: 0;text-decoration: none;}
+        .modal-icons{width: 100%}
+        .flex-container{display: flex;justify-content: space-between;padding: 22px;padding-bottom: 0;padding-right: 0;flex-direction: row;align-items: center;flex-wrap: wrap;flex-flow: row wrap;align-content: center;}
+        .flex{text-align: center;position: relative;opacity: 1;transition: 0.2s opacity ease-in-out;margin-bottom: 22px;flex: 0 0 25%;}
+        .flex:hover{opacity: 0.4;}
+        .flex img{height: 30px;display: inline-block;}
+        .btn-container{display: flex;justify-content: center;flex-direction: row;align-items: center;flex-wrap: wrap;flex-flow: row wrap;align-content: center;padding: 22px;padding-top: 0;}
+        .add-link-btn{border: none;background: #27ae60;color: #fff;height: 35px;width: 35px;font-size: 18px;border-radius: 50%;cursor: pointer;margin: 0 10px;}
+        .add-link-btn:hover, .add-link-btn:focus{background: #227645;outline: none;}
+        .remove-link-btn{border: none;background: #e74c3c;color: #fff;height: 35px;width: 35px;font-size: 18px;border-radius: 50%;cursor: pointer;margin: 0 10px;}
+        .remove-link-btn:hover, .remove-link-btn:focus{background: #c0392b;outline: none;}
+        .remove-icon{position: relative;}
+        .remove-icon::after{content: "X";position: absolute;top: 0;right: 0;z-index: 99;font-size: 18px;font-weight: 600;color: #e74c3c;}
+        .add-container{padding: 22px;background: #dedede;}
+        input{height: 20px;width: 100%;padding: 0 5px;}
+        .form-group{margin-bottom: 10px;}
+        label{font-size: 15px;margin-bottom: 5px;display: block;}
+        .form-group:last-child{margin: 0;}
+        .clearfix:after{display: block;content: '';clear: both;}
+        .not-active{pointer-events: none;cursor: default;text-decoration:none;}
+    </style>
+</head>
+<body>
+
+    <div class="modal-icons">
+        <div class="flex-container" id="flex-container">
+            <!-- <a href="https://www.anupbista.com.np" target="_blank" class="flex"><img src="images/anup.png"></a> -->
+        </div> 
+        <div class="btn-container">
+            <button class="add-link-btn" id="add-link-btn" title="Add New Link"><i class="fas fa-plus"></i></button>
+            <!-- <button class="remove-link-btn" id="remove-link-btn" title="Remove Link"><i class="fas fa-minus"></i></button> -->
+        </div>
+        <div class="add-container" id="add-container" style="display:none;">
+            <form id="add-form">
+                <div class="form-group">
+                    <label for="link">Enter App Link</label>
+                    <input type="text" id="link">
+                </div>
+                <div class="form-group">
+                    <label for="logo">Enter Logo Link</label>
+                    <input type="text" id="logo">
+                </div>
+                <div class="form-group clearfix">
+                    <button type="button" id="submitBtn" style="font-weight:600;;margin-top:10px;border: none;background: #27ae60;color: #fff;font-size: 16px;cursor: pointer;padding:6px 20px;float:right;">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
