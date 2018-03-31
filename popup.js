@@ -32,8 +32,10 @@ loadHistory(uniqueID);
 
 
 submitBtn.addEventListener('click',function(){
+    const favicon_url = "https://plus.google.com/_/favicon?domain_url=";
     var app_url = document.getElementById('link').value;
-    var logoUrl = document.getElementById('logo').value;
+    var logoUrl = favicon_url+app_url;
+    console.log(logoUrl);
     if ( app_url=="" || logoUrl=="" ){
         alert("All Fields must be filled!!!");
     }
@@ -112,4 +114,3 @@ function loadHistory(uniqueID) {
 //             flexContainer[i].classList.toggle("remove-icon");         
 //         }
 //   });
-
